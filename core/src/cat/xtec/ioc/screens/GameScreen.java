@@ -36,7 +36,7 @@ public class GameScreen implements Screen {
     private Batch batch;
 
     // Per controlar l'animació de l'explosió
-   // private float explosionTime = 0;
+    private float explosionTime = 0;
 
     // Preparem el textLayout per escriure text
    // private GlyphLayout textLayout;
@@ -145,28 +145,28 @@ public class GameScreen implements Screen {
 
         if (!gameOver) {
             if (scrollHandler.collides(spacecraft)) {
-                // Si hi ha hagut col·lisió: Reproduïm l'explosió
-//                AssetManager.explosionSound.play();
-                // stage.getRoot().findActor("spacecraft").remove();
-                //  gameOver = true;
+               // Si hi ha hagut col·lisió: Reproduïm l'explosió
+                AssetManager.explosionSound.play();
+                stage.getRoot().findActor("spacecraft").remove();
+                gameOver = true;
             }
-            /*
+
         } else {
             batch.begin();
             // Si hi ha hagut col·lisió: Reproduïm l'explosió
             batch.draw(AssetManager.explosionAnim.getKeyFrame(explosionTime, false), (spacecraft.getX() + spacecraft.getWidth() / 2) - 32, spacecraft.getY() + spacecraft.getHeight() / 2 - 32, 64, 64);
-            AssetManager.font.draw(batch, textLayout, Settings.GAME_WIDTH/2 - textLayout.width/2, Settings.GAME_HEIGHT/2 - textLayout.height/2);
+            // AssetManager.font.draw(batch, textLayout, Settings.GAME_WIDTH/2 - textLayout.width/2, Settings.GAME_HEIGHT/2 - textLayout.height/2);
             batch.end();
 
             explosionTime += delta;
         }
-        */
+
 
             //drawElements();
 
 
         }
-    }
+
 
     @Override
     public void resize(int width, int height) {

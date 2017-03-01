@@ -61,7 +61,7 @@ public class AssetManager {
 
         // Creem l'animació de l'asteroid i fem que s'executi contínuament en sentit anti-horari
 
-      /*  asteroidAnim = new Animation(0.05f, asteroid);
+        asteroidAnim = new Animation(0.05f, asteroid);
         asteroidAnim.setPlayMode(Animation.PlayMode.LOOP_REVERSED);
 
         // Creem els 16 estats de l'explosió
@@ -78,19 +78,19 @@ public class AssetManager {
 
         // Finalment creem l'animació
         explosionAnim = new Animation(0.04f, explosion);
-*/
+
         // Fons de pantalla
         background = new TextureRegion(sheet, 0, 177, 480, 135);
         background.flip(false, true);
 
         /******************************* Sounds *************************************/
         // Explosió
-     //   explosionSound = Gdx.audio.newSound(Gdx.files.internal("sounds/explosion.wav"));
+      explosionSound = Gdx.audio.newSound(Gdx.files.internal("sounds/explosion.wav"));
 
         // Música del joc
-     //   music = Gdx.audio.newMusic(Gdx.files.internal("sounds/Afterburner.ogg"));
-     //   music.setVolume(0.2f);
-     //   music.setLooping(true);
+        music = Gdx.audio.newMusic(Gdx.files.internal("sounds/Afterburner.ogg"));
+       music.setVolume(0.2f);
+       music.setLooping(true);
 
         /******************************* Text *************************************/
         // Font space
